@@ -40,6 +40,457 @@
 .capacity-note{font-size:6.5px;color:var(--muted);line-height:1.35;margin:6px 0 0}
 
 @media(max-width:980px){.head{grid-template-columns:80px 1fr 120px}.intro,.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.title,.update{text-align:center}.logo{margin:auto}.hero{padding:14px 18px 18px}.container{width:min(100% - 24px,1040px);padding:14px 0 24px}}@media(max-width:620px){.head{grid-template-columns:1fr;gap:8px}.kpis{grid-template-columns:1fr}.title h1{font-size:21px}.update{text-align:center}.intro,.grid{gap:10px}.container{width:min(100% - 16px,1040px)}}
+
+/* Ajuste solicitado: prioridades mais compactas e capacidade mais próxima */
+aside{gap:8px!important}
+.priority-list{gap:6px!important}
+.priority-item{
+    padding:8px 10px!important;
+    min-height:68px!important;
+    border-radius:9px!important;
+}
+.priority-rank{
+    width:32px!important;
+    height:32px!important;
+    min-width:32px!important;
+    font-size:14px!important;
+    border-radius:9px!important;
+}
+.priority-content strong{
+    font-size:10px!important;
+    line-height:1.2!important;
+    margin-bottom:2px!important;
+}
+.priority-content span{
+    font-size:7px!important;
+    line-height:1.25!important;
+}
+.priority-value{
+    font-size:16px!important;
+    min-width:48px!important;
+}
+.panel-title{
+    padding-top:8px!important;
+    padding-bottom:8px!important;
+}
+.panel-body{
+    padding-top:9px!important;
+    padding-bottom:9px!important;
+}
+
+
+.priorities{gap:6px!important}
+.priority-card{padding:8px 10px!important;min-height:68px!important}
+
+
+    .capacity-horizontal .capacity-foot{min-width:0}
+}
+
+
+/* Painel único: capacidade + estimativa de conclusão */
+.combined-operational-panel{
+    margin-top:12px;
+    margin-bottom:12px;
+    border:1px solid var(--borda);
+    border-radius:12px;
+    background:#fff;
+    overflow:hidden;
+    box-shadow:0 8px 22px rgba(14,74,124,.08);
+}
+.combined-operational-title{
+    padding:9px 12px;
+    background:linear-gradient(90deg,var(--escuro),var(--azul));
+    color:#fff;
+    font-size:10px;
+    font-weight:900;
+}
+.combined-operational-body{
+    position:relative;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    min-height:275px;
+}
+.combined-operational-body::after{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:55%;
+    width:56px;
+    transform:translateX(-50%) skewX(-12deg);
+    background:linear-gradient(180deg,#eef7fd 0%,#dbeefb 100%);
+    border-left:1px solid #c8deef;
+    border-right:1px solid #c8deef;
+    pointer-events:none;
+    z-index:1;
+}
+.combined-side{
+    position:relative;
+    z-index:2;
+    padding:12px 16px;
+}
+.combined-side.capacity-side{
+    padding-right:44px;
+}
+.combined-side.estimate-side{
+    padding-left:44px;
+}
+.combined-section-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    margin-bottom:8px;
+}
+.combined-section-head strong{
+    font-size:10px;
+    color:var(--escuro);
+    text-transform:uppercase;
+    letter-spacing:.3px;
+}
+.combined-section-head span{
+    font-size:7px;
+    color:var(--muted);
+    font-weight:750;
+}
+.capacity-main-grid{
+    display:grid;
+    grid-template-columns:1fr 118px;
+    gap:10px;
+    align-items:start;
+}
+.capacity-main-grid .capacity-table{
+    width:100%;
+}
+.capacity-kpis{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+.capacity-kpi{
+    border:1px solid var(--borda);
+    border-radius:8px;
+    padding:8px;
+    background:#f8fbfe;
+    text-align:center;
+}
+.capacity-kpi span{
+    display:block;
+    font-size:6px;
+    color:var(--muted);
+    text-transform:uppercase;
+    font-weight:850;
+}
+.capacity-kpi b{
+    display:block;
+    margin-top:3px;
+    font-size:12px;
+    color:var(--azul);
+}
+.estimate-stack{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+.estimate-block{
+    border:1px solid var(--borda);
+    border-radius:9px;
+    overflow:hidden;
+    background:#fff;
+}
+.estimate-block-head{
+    padding:7px 9px;
+    background:#eef7fd;
+    border-bottom:1px solid var(--borda);
+}
+.estimate-block-head strong{
+    display:block;
+    font-size:8px;
+    line-height:1.2;
+    color:var(--escuro);
+    text-transform:uppercase;
+}
+.estimate-row{
+    display:grid;
+    grid-template-columns:1fr auto;
+    align-items:center;
+    gap:8px;
+    padding:7px 9px;
+    border-top:1px solid #edf3f8;
+}
+.estimate-row:first-of-type{border-top:0}
+.estimate-row span{
+    font-size:8px;
+    color:var(--texto);
+    font-weight:800;
+}
+.estimate-row .days{
+    text-align:right;
+}
+.estimate-row .days b{
+    display:block;
+    font-size:14px;
+    line-height:1;
+    color:var(--azul);
+}
+.estimate-row .days small{
+    display:block;
+    margin-top:2px;
+    font-size:6px;
+    color:var(--muted);
+    font-weight:750;
+}
+.combined-note{
+    margin:7px 0 0;
+    font-size:6.5px;
+    color:var(--muted);
+    line-height:1.35;
+}
+.detail-panel{margin-top:0!important}
+@media(max-width:980px){
+    .combined-operational-body{grid-template-columns:1fr}
+    .combined-operational-body::after{display:none}
+    .combined-side.capacity-side,
+    .combined-side.estimate-side{padding:12px 14px}
+    .combined-side.estimate-side{border-top:1px solid var(--borda)}
+}
+@media(max-width:650px){
+    .capacity-main-grid{grid-template-columns:1fr}
+    .capacity-kpis{display:grid;grid-template-columns:1fr 1fr}
+}
+
+
+/* Versão mais fina e alinhada do planejamento operacional */
+.combined-operational-panel{
+    width:100%;
+    margin:10px 0 12px;
+}
+.combined-operational-title{
+    padding:7px 12px;
+    font-size:9px;
+}
+.combined-operational-body{
+    min-height:0;
+    grid-template-columns:1.12fr .88fr;
+}
+.combined-side{
+    padding-top:8px;
+    padding-bottom:8px;
+}
+.combined-side.capacity-side{
+    padding-left:12px;
+    padding-right:38px;
+}
+.combined-side.estimate-side{
+    padding-left:38px;
+    padding-right:12px;
+}
+.combined-section-head{
+    margin-bottom:5px;
+}
+.combined-section-head strong{
+    font-size:9px;
+}
+.combined-section-head span{
+    font-size:6px;
+}
+.capacity-main-grid{
+    grid-template-columns:1fr 105px;
+    gap:7px;
+}
+.combined-operational-panel .capacity-table th{
+    padding:4px 4px;
+    font-size:7px;
+}
+.combined-operational-panel .capacity-table td{
+    padding:3px 4px;
+    font-size:8px;
+    line-height:1.05;
+}
+.capacity-kpis{
+    gap:5px;
+}
+.capacity-kpi{
+    padding:6px 5px;
+    border-radius:7px;
+}
+.capacity-kpi span{
+    font-size:5.5px;
+}
+.capacity-kpi b{
+    font-size:10px;
+    margin-top:2px;
+}
+.estimate-stack{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:6px;
+}
+.estimate-block{
+    border-radius:7px;
+}
+.estimate-block-head{
+    padding:5px 6px;
+    min-height:29px;
+}
+.estimate-block-head strong{
+    font-size:6.5px;
+}
+.estimate-row{
+    padding:5px 6px;
+    gap:4px;
+}
+.estimate-row span{
+    font-size:6.5px;
+}
+.estimate-row .days b{
+    font-size:11px;
+}
+.estimate-row .days small{
+    font-size:5px;
+}
+.combined-note{
+    display:none;
+}
+.combined-operational-body::after{
+    width:42px;
+}
+.detail-panel{
+    width:100%;
+    margin-top:0!important;
+}
+@media(max-width:980px){
+    .estimate-stack{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+    .estimate-stack{grid-template-columns:1fr}
+}
+
+
+/* Estrutura final: gráfico/prioridades em cima e operação em largura total */
+.full-width-bottom{
+    width:100%;
+    margin-top:0;
+}
+.full-width-bottom .combined-operational-panel,
+.full-width-bottom .detail-panel{
+    width:100%;
+    max-width:none;
+}
+.full-width-bottom .combined-operational-panel{
+    margin:0 0 14px;
+}
+.full-width-bottom .detail-panel{
+    margin:0 0 14px!important;
+}
+.combined-operational-title{
+    padding:8px 14px!important;
+    font-size:10px!important;
+}
+.combined-operational-body{
+    min-height:0!important;
+    grid-template-columns:1.06fr .94fr!important;
+}
+.combined-side{
+    padding-top:10px!important;
+    padding-bottom:10px!important;
+}
+.combined-side.capacity-side{
+    padding-left:14px!important;
+    padding-right:42px!important;
+}
+.combined-side.estimate-side{
+    padding-left:42px!important;
+    padding-right:14px!important;
+}
+.capacity-main-grid{
+    grid-template-columns:minmax(0,1fr) 135px!important;
+    gap:10px!important;
+}
+.combined-operational-panel .capacity-table th{
+    padding:5px 6px!important;
+    font-size:7px!important;
+}
+.combined-operational-panel .capacity-table td{
+    padding:4px 6px!important;
+    font-size:8px!important;
+}
+.capacity-kpi{
+    padding:8px 7px!important;
+}
+.capacity-kpi b{
+    font-size:11px!important;
+}
+.estimate-stack{
+    grid-template-columns:1fr 1fr!important;
+    gap:8px!important;
+}
+.estimate-block-head{
+    min-height:34px!important;
+    padding:7px 8px!important;
+}
+.estimate-block-head strong{
+    font-size:7px!important;
+}
+.estimate-row{
+    padding:7px 8px!important;
+}
+.estimate-row span{
+    font-size:7px!important;
+}
+.estimate-row .days b{
+    font-size:13px!important;
+}
+.detail-panel .table-wrap{
+    width:100%;
+    max-height:360px;
+}
+.detail-panel table{
+    width:100%;
+    min-width:880px;
+}
+@media(max-width:980px){
+    .combined-operational-body{grid-template-columns:1fr!important}
+    .combined-operational-body::after{display:none!important}
+    .combined-side.capacity-side,
+    .combined-side.estimate-side{
+        padding:12px 14px!important;
+    }
+    .combined-side.estimate-side{
+        border-top:1px solid var(--borda);
+    }
+}
+@media(max-width:650px){
+    .capacity-main-grid{grid-template-columns:1fr!important}
+    .estimate-stack{grid-template-columns:1fr!important}
+}
+
+
+/* Fundo branco igual aos demais cards */
+.combined-operational-panel{
+  background:#ffffff !important;
+  border:1px solid var(--borda) !important;
+  box-shadow:0 8px 22px rgba(14,74,124,.08)!important;
+}
+.combined-operational-body{
+  background:#ffffff !important;
+}
+.combined-side{
+  background:#ffffff !important;
+}
+.combined-operational-body::after{
+  background:#ffffff !important;
+  border-left:1px solid #e5edf5 !important;
+  border-right:1px solid #e5edf5 !important;
+}
+.capacity-kpi,
+.estimate-block{
+  background:#ffffff !important;
+}
+.estimate-block-head{
+  background:#ffffff !important;
+}
+
 </style>
 </head>
 <body>
@@ -54,48 +505,100 @@
 </section>
 <section class="grid"><div>
 <div class="panel"><div class="panel-title">Estoque consolidado por atividade — 2025 + 2026</div><div class="panel-body"><div id="barChart" class="chart"></div></div></div>
-<div class="panel"><div class="panel-title">Detalhamento operacional</div><div class="panel-body"><div class="toolbar"><div class="filters"><button class="active" data-year="Todos">Todos</button><button data-year="2025">2025</button><button data-year="2026">2026</button><button data-year="Inicial">Frentes iniciais</button></div><button class="clear">Limpar filtros</button></div><div class="table-wrap"><table><thead><tr><th>Atividade</th><th>A fazer 2025</th><th>A fazer 2026</th><th>Total a fazer</th><th>Feitos</th><th>Avanço</th><th>Direcionamento</th></tr></thead><tbody id="tbody"></tbody></table></div></div></div>
+
+
+
 </div><aside>
 <div class="panel"><div class="panel-title">Prioridades para começar</div><div class="panel-body"><div class="focus-list" id="focusList"></div></div></div>
-<div class="panel"><div class="panel-title">Capacidade operacional estimada</div><div class="panel-body"><p class="capacity-intro">Produção diária estimada considerando jornada de 8 horas: <strong>56 certidões</strong> ou <strong>40 relatórios</strong> por servidor.</p><table class="capacity-table"><thead><tr><th>Servidores</th><th>Certidões<br>por dia</th><th>Relatórios<br>por dia</th></tr></thead><tbody><tr><td>1</td><td>56</td><td>40</td></tr><tr><td>2</td><td>112</td><td>80</td></tr><tr><td>3</td><td>168</td><td>120</td></tr><tr><td>4</td><td>224</td><td>160</td></tr><tr><td>5</td><td>280</td><td>200</td></tr><tr><td>6</td><td>336</td><td>240</td></tr><tr><td>7</td><td>392</td><td>280</td></tr><tr><td>8</td><td>448</td><td>320</td></tr></tbody></table><div class="capacity-foot"><div class="capacity-box"><span>Base por servidor</span><b>56 certidões/dia</b></div><div class="capacity-box"><span>Base por servidor</span><b>40 relatórios/dia</b></div></div>
-<div class="capacity-scenarios">
-  <div class="capacity-scenarios-title">Estimativa de conclusão</div>
-  <div class="capacity-scenarios-grid">
-    <div class="capacity-scenario">
-      <div class="capacity-scenario-head">
-        <strong>Relatórios sem defesa</strong>
-        <span>Prazo estimado</span>
-      </div>
-      <div class="capacity-scenario-row">
-        <div class="capacity-scenario-team"><b>2</b> servidores</div>
-        <div class="capacity-scenario-time"><b>40</b><small>dias úteis</small></div>
-      </div>
-      <div class="capacity-scenario-row">
-        <div class="capacity-scenario-team"><b>4</b> servidores</div>
-        <div class="capacity-scenario-time"><b>7</b><small>dias úteis</small></div>
-      </div>
-    </div>
+</aside></section>
+<section class="full-width-bottom">
+<div class="combined-operational-panel">
+  <div class="combined-operational-title">Planejamento operacional</div>
+  <div class="combined-operational-body">
 
-    <div class="capacity-scenario">
-      <div class="capacity-scenario-head">
-        <strong>Certidões de encerramento</strong>
-        <span>Prazo estimado</span>
+    <section class="combined-side capacity-side">
+      <div class="combined-section-head">
+        <strong>Capacidade operacional</strong>
+        <span>Produção diária estimada</span>
       </div>
-      <div class="capacity-scenario-row">
-        <div class="capacity-scenario-team"><b>2</b> servidores</div>
-        <div class="capacity-scenario-time"><b>14</b><small>dias úteis</small></div>
+
+      <div class="capacity-main-grid">
+        <table class="capacity-table">
+          <thead>
+            <tr>
+              <th>Servidores</th>
+              <th>Certidões<br>por dia</th>
+              <th>Relatórios<br>por dia</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>56</td><td>40</td></tr>
+            <tr><td>2</td><td>112</td><td>80</td></tr>
+            <tr><td>3</td><td>168</td><td>120</td></tr>
+            <tr><td>4</td><td>224</td><td>160</td></tr>
+            <tr><td>5</td><td>280</td><td>200</td></tr>
+            <tr><td>6</td><td>336</td><td>240</td></tr>
+            <tr><td>7</td><td>392</td><td>280</td></tr>
+            <tr><td>8</td><td>448</td><td>320</td></tr>
+          </tbody>
+        </table>
+
+        <div class="capacity-kpis">
+          <div class="capacity-kpi">
+            <span>Base por servidor</span>
+            <b>56 certidões/dia</b>
+          </div>
+          <div class="capacity-kpi">
+            <span>Base por servidor</span>
+            <b>40 relatórios/dia</b>
+          </div>
+        </div>
       </div>
-      <div class="capacity-scenario-row">
-        <div class="capacity-scenario-team"><b>4</b> servidores</div>
-        <div class="capacity-scenario-time"><b>20</b><small>dias úteis</small></div>
+    </section>
+
+    <section class="combined-side estimate-side">
+      <div class="combined-section-head">
+        <strong>Estimativa de conclusão</strong>
+        <span>Conforme alocação</span>
       </div>
-    </div>
+
+      <div class="estimate-stack">
+        <div class="estimate-block">
+          <div class="estimate-block-head">
+            <strong>Relatórios sem defesa</strong>
+          </div>
+          <div class="estimate-row">
+            <span>2 servidores</span>
+            <div class="days"><b>40</b><small>dias úteis</small></div>
+          </div>
+          <div class="estimate-row">
+            <span>4 servidores</span>
+            <div class="days"><b>7</b><small>dias úteis</small></div>
+          </div>
+        </div>
+
+        <div class="estimate-block">
+          <div class="estimate-block-head">
+            <strong>Certidões de encerramento</strong>
+          </div>
+          <div class="estimate-row">
+            <span>2 servidores</span>
+            <div class="days"><b>14</b><small>dias úteis</small></div>
+          </div>
+          <div class="estimate-row">
+            <span>4 servidores</span>
+            <div class="days"><b>20</b><small>dias úteis</small></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="combined-note">Cenários informados para comparação de prazo conforme a distribuição da equipe.</p>
+    </section>
+
   </div>
-  <p class="capacity-note">Cenários informados para comparação de prazo conforme a distribuição da equipe.</p>
-</div>
+<div class="panel detail-panel"><div class="panel-title">Detalhamento operacional</div><div class="panel-body"><div class="toolbar"><div class="filters"><button class="active" data-year="Todos">Todos</button><button data-year="2025">2025</button><button data-year="2026">2026</button><button data-year="Inicial">Frentes iniciais</button></div><button class="clear">Limpar filtros</button></div><div class="table-wrap"><table><thead><tr><th>Atividade</th><th>A fazer 2025</th><th>A fazer 2026</th><th>Total a fazer</th><th>Feitos</th><th>Avanço</th><th>Direcionamento</th></tr></thead><tbody id="tbody"></tbody></table></div></div></div>
+</section>
 
-
-</div></div></aside></section>
 <div class="footer">Painel desenvolvido para apresentação e validação interna • Clique nos cards, prioridades, gráfico ou tabela para cruzar as informações.</div>
 </main>
 <script>
