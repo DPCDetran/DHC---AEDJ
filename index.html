@@ -1482,7 +1482,187 @@ body{
     grid-template-columns:1fr !important;
   }
 }
-</style></head>
+
+
+/* ==========================================================
+   MODO APRESENTAÇÃO — LEITURA À DISTÂNCIA
+   Aumenta a tipografia sem alterar conteúdo ou navegação.
+========================================================== */
+@media (min-width:1200px){
+  .shell{max-width:1840px;}
+  main{padding:32px 34px 58px;}
+
+  .coordenadoria-responsavel-texto{font-size:20px !important;}
+  .section-head h2{font-size:30px !important;}
+  .section-head p{font-size:17px !important;}
+  .section-head .num{min-width:46px;height:46px;font-size:14px !important;}
+  .section-head .tag{font-size:12px !important;padding:9px 13px;}
+
+  #sec-competencias .competencias .card h3,
+  #pen-competencias .competencias .card h3{
+    font-size:17px !important;
+    line-height:1.28 !important;
+  }
+  #sec-competencias .mini-list li,
+  #pen-competencias .mini-list li{
+    font-size:14.5px !important;
+    line-height:1.48 !important;
+    padding:11px 5px !important;
+  }
+  #sec-competencias .sigla,
+  #pen-competencias .sigla{
+    font-size:13px !important;
+    padding:5px 10px !important;
+    margin-top:9px !important;
+  }
+  #sec-competencias .competencias .card,
+  #pen-competencias .competencias .card{
+    min-height:440px !important;
+    padding:22px 18px !important;
+  }
+  .competencias{gap:15px;}
+  .competencias-penalidades{gap:16px !important;}
+
+  .tabs .tab{font-size:15px !important;padding:18px 20px 15px;}
+  .jump a{font-size:13px !important;padding:9px 13px;}
+}
+
+@media (min-width:1700px){
+  .section-head h2{font-size:34px !important;}
+  .section-head p{font-size:19px !important;}
+  .coordenadoria-responsavel-texto{font-size:22px !important;}
+  #sec-competencias .competencias .card h3,
+  #pen-competencias .competencias .card h3{font-size:19px !important;}
+  #sec-competencias .mini-list li,
+  #pen-competencias .mini-list li{font-size:16px !important;}
+  #sec-competencias .sigla,
+  #pen-competencias .sigla{font-size:14px !important;}
+}
+
+/* ==========================================================
+   AJUSTE FINAL — TEXTO INTERNO DOS CARDS PARA PROJETOR
+   Mantém títulos como estão e aumenta somente a escrita
+   dentro dos cards.
+========================================================== */
+@media (min-width:1200px){
+
+  /* Competências — textos internos */
+  #sec-competencias .mini-list li,
+  #pen-competencias .mini-list li{
+    font-size:18px !important;
+    line-height:1.5 !important;
+    font-weight:600 !important;
+    padding:13px 6px !important;
+    color:#284861 !important;
+  }
+
+  /* Textos corridos dentro de cards */
+  .card p,
+  .objective .big,
+  .next .card p,
+  .judicial .card p{
+    font-size:18px !important;
+    line-height:1.55 !important;
+    font-weight:550 !important;
+    color:#36546b !important;
+  }
+
+  /* Cards de áreas / entregas */
+  .deliverable,
+  .area .body{
+    font-size:17px !important;
+    line-height:1.5 !important;
+  }
+
+  /* Textos dos indicadores */
+  .stat-strip .s .l,
+  .kpi .l{
+    font-size:15px !important;
+    line-height:1.35 !important;
+  }
+
+  /* Linha do tempo */
+  .pen-timeline-date{
+    font-size:16px !important;
+  }
+  .pen-timeline-title{
+    font-size:18px !important;
+  }
+  .pen-timeline-sub{
+    font-size:15px !important;
+  }
+
+  /* Cards de observação / alerta */
+  .conclusion,
+  .insight{
+    font-size:17px !important;
+    line-height:1.55 !important;
+  }
+  .attention-adjust-content p{
+    font-size:17px !important;
+    line-height:1.5 !important;
+  }
+
+  /* Mais espaço interno para a fonte maior */
+  #sec-competencias .competencias .card,
+  #pen-competencias .competencias .card{
+    padding:24px 20px !important;
+    min-height:500px !important;
+  }
+}
+
+@media (min-width:1700px){
+  #sec-competencias .mini-list li,
+  #pen-competencias .mini-list li{
+    font-size:20px !important;
+  }
+
+  .card p,
+  .objective .big,
+  .next .card p,
+  .judicial .card p{
+    font-size:20px !important;
+  }
+
+  .deliverable,
+  .area .body{
+    font-size:19px !important;
+  }
+
+  .conclusion,
+  .insight,
+  .attention-adjust-content p{
+    font-size:19px !important;
+  }
+
+  #sec-competencias .competencias .card,
+  #pen-competencias .competencias .card{
+    min-height:540px !important;
+  }
+}
+
+</style>
+<style>
+/* Ajuste de destaque — PONTO DE AJUSTE */
+.attention-adjust-label{
+  font-size:14px !important;
+  font-weight:900 !important;
+  letter-spacing:1.2px !important;
+  margin-bottom:5px !important;
+}
+@media (min-width:1200px){
+  .attention-adjust-label{
+    font-size:16px !important;
+  }
+}
+@media (min-width:1700px){
+  .attention-adjust-label{
+    font-size:18px !important;
+  }
+}
+</style>
+
+</head>
 <body><div class="shell">
 <header class="hero">
 <div class="brand">
@@ -1574,7 +1754,7 @@ body{
 <div class="card hot"><h3>Desbloqueio de permissionário penalizado<span class="pill">Em alta</span></h3><p>Nos casos em que a decisão judicial e os registros disponíveis permitam identificar com segurança a providência determinada, a análise e o tratamento podem ser concluídos pela AEDJ, sem necessidade de encaminhamento à Coordenadoria de Gestão de Condutores.</p><div class="flow"><span>Decisão judicial</span><i>→</i><span>Análise AEDJ</span><i>→</i><span>Execução da providência</span></div></div>
 <div class="card"><h3>Confirmação de autenticidade da CNH</h3><p>Quando a solicitação se limitar à confirmação de dados ou da autenticidade do documento, a AEDJ pode realizar a análise a partir das consultas institucionais disponíveis, acionando a área técnica apenas diante de divergência cadastral ou necessidade efetiva de intervenção.</p><div class="flow"><span>Solicitação judicial</span><i>→</i><span>Consulta AEDJ</span><i>→</i><span>DHC somente se houver divergência</span></div></div>
 </div>
-<div class="conclusion"><b>Oportunidade de otimização:</b> a Portaria nº 44/2025 atribui à AEDJ e à Assessoria de Demandas de Condutores a instrução e o acompanhamento das demandas judiciais relacionadas à habilitação, bem como a adoção das providências necessárias ao seu atendimento. Nos dois cenários acima, quando a análise estiver suficientemente instruída e não houver impedimento sistêmico, o tratamento pode ser realizado diretamente pela AEDJ, reduzindo tramitações internas e o tempo de resposta.</div>
+<div class="conclusion"><b>Oportunidade de otimização:</b> Nos dois cenários acima, quando a análise estiver suficientemente instruída e não houver impedimento sistêmico, o tratamento pode ser realizado diretamente pela AEDJ, reduzindo tramitações internas e o tempo de resposta.</div>
 </div>
 </section>
 <section class="panel" id="penalidades">
@@ -1824,7 +2004,7 @@ body{
 <div class="attention-adjust-card">
 <div class="attention-adjust-icon">!</div>
 <div class="attention-adjust-content">
-<span class="attention-adjust-label">ATENÇÃO • PONTO DE AJUSTE</span>
+<span class="attention-adjust-label">PONTO DE AJUSTE</span>
 <strong>Exclusão da infração do processo de cassação</strong>
 <p>Garantir também a consequente baixa da portaria, evitando o cumprimento parcial da decisão.</p>
 </div>
