@@ -1141,6 +1141,60 @@ table.sei tfoot td:first-child{text-align:left}
   margin-bottom:22px !important;
 }
 
+
+/* Competências — Coordenadoria de Penalidades */
+.pen-competencias-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  align-items:stretch;
+}
+.pen-comp-card{
+  border:1px solid #d6e3ec;
+  border-radius:12px;
+  background:#fff;
+  padding:18px 16px;
+  text-align:center;
+  box-shadow:0 7px 20px rgba(0,64,119,.045);
+}
+.pen-comp-card.destaque{
+  border-left:5px solid #3490CE;
+  background:linear-gradient(145deg,#eef8fd,#ffffff);
+}
+.pen-comp-card h3{
+  color:#004077;
+  font-size:12px;
+  line-height:1.35;
+  margin:0 0 8px;
+  min-height:34px;
+}
+.pen-comp-sigla{
+  display:inline-block;
+  padding:4px 9px;
+  margin-bottom:10px;
+  border-radius:6px;
+  background:#edf6fb;
+  color:#005CA8;
+  font-size:9px;
+  font-weight:900;
+}
+.pen-comp-card p{
+  margin:0;
+  padding:10px 2px;
+  border-top:1px solid #edf2f5;
+  color:#61798b;
+  font-size:10px;
+  line-height:1.45;
+}
+.pen-comp-card p:first-of-type{
+  border-top:0;
+}
+@media(max-width:1100px){
+  .pen-competencias-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+  .pen-competencias-grid{grid-template-columns:1fr}
+}
 </style></head>
 <body><div class="shell">
 <header class="hero">
@@ -1161,17 +1215,7 @@ table.sei tfoot td:first-child{text-align:left}
 <a href="#sec-sei">3. Processos SEI recebidos</a>
 <a href="#sec-judicial">4. Demandas judiciais de maior volume</a>
 </div>
-<div class="jump" id="jump-penalidades" style="display:none">
-<a href="#pen-fraudes">1. Fraudes CNH</a>
-<a href="#pen-paunico">2. PA único</a>
-<a href="#pen-modulo">3. Jornada AEDJ</a>
-<a href="#pen-novidades">4. Novidades / impactos</a>
-<a href="#pen-cumprimento">5. Cumprimento</a>
-<a href="#pen-decisao">5.1 Decisão</a>
-<a href="#pen-pontuacao">5.2 Pontuação</a>
-<a href="#pen-suspensao">5.3 Suspensão</a>
-<a href="#pen-cassacao">5.4 Cassação</a>
-</div>
+<div class="jump" id="jump-penalidades" style="display:none"><a href="#pen-competencias">1. Competências</a><a href="#pen-fraudes">2. Fraudes CNH</a><a href="#pen-paunico">3. PA único</a><a href="#pen-modulo">4. Jornada AEDJ</a><a href="#pen-novidades">5. Novidades / impactos</a><a href="#pen-cumprimento">6. Cumprimento</a></div>
 <main>
 <section class="panel active" id="condutores">
 <div class="coordenadoria-responsavel-texto">Responsável pela Coordenadoria: Ane Freitas</div><div class="section" id="sec-competencias">
@@ -1249,10 +1293,50 @@ table.sei tfoot td:first-child{text-align:left}
 <section class="panel" id="penalidades">
 <!-- 01 -->
 <!-- 02 -->
-<div class="coordenadoria-responsavel-texto">Responsável pela Coordenadoria: Evelyn Fortunato</div><div class="section" id="pen-fraudes">
+<div class="coordenadoria-responsavel-texto">Responsável pela Coordenadoria: Evelyn Fortunato</div><div class="section" id="pen-competencias">
 <div class="section-head">
 <div>
 <span class="num">01</span>
+<h2>Competências da Coordenadoria de Penalidades de Habilitação</h2>
+<p>Síntese das atribuições previstas nos arts. 206 a 209.</p>
+</div>
+<span class="tag">ESTRUTURA E ATRIBUIÇÕES</span>
+</div>
+<div class="pen-competencias-grid">
+<div class="pen-comp-card destaque">
+<h3>Coordenadoria de Penalidades de Habilitação</h3>
+<span class="pen-comp-sigla">Art. 206</span>
+<p>Gestão dos procedimentos administrativos de suspensão e cassação do direito de dirigir, garantindo o cumprimento das normas legais.</p>
+<p>Análise de defesas administrativas relacionadas às penalidades de suspensão e cassação.</p>
+<p>Monitoramento dos indicadores de desempenho dos processos de suspensão e cassação, promovendo eficiência nos trâmites.</p>
+<p>Identificação e prevenção de inconsistências, fraudes ou irregularidades, por meio de auditorias periódicas e cruzamento de dados em sistemas integrados.</p>
+</div>
+<div class="pen-comp-card">
+<h3>Divisão de Processos de Suspensão</h3>
+<span class="pen-comp-sigla">Art. 207</span>
+<p>Instrução e tramitação de processos administrativos de suspensão do direito de dirigir.</p>
+<p>Análise de conformidade das penalidades aplicadas com a legislação vigente.</p>
+<p>Elaboração de relatórios sobre os processos de suspensão em andamento e concluídos.</p>
+</div>
+<div class="pen-comp-card">
+<h3>Divisão de Processos de Cassação</h3>
+<span class="pen-comp-sigla">Art. 208</span>
+<p>Instrução e tramitação de processos administrativos de cassação do direito de dirigir.</p>
+<p>Análise de recursos administrativos apresentados por condutores sujeitos à cassação.</p>
+<p>Monitoramento da efetivação das penalidades de cassação do documento de habilitação.</p>
+</div>
+<div class="pen-comp-card">
+<h3>Divisão de Processos de Condutores</h3>
+<span class="pen-comp-sigla">Art. 209</span>
+<p>Análise e instrução de processos administrativos relacionados à habilitação de condutores.</p>
+<p>Acompanhamento e gestão de processos de renovação, reabilitação e adição de categorias de habilitação.</p>
+<p>Elaboração de relatórios e indicadores sobre a tramitação e conclusão dos processos.</p>
+</div>
+</div>
+</div><div class="section" id="pen-fraudes">
+<div class="section-head">
+<div>
+<span class="num">02</span>
 <h2>Casos de fraudes envolvendo CNH</h2>
 <p>Procedimento e eventuais penalidades — exemplo indicado no documento: Distrito Federal.</p>
 </div>
@@ -1281,7 +1365,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-paunico">
 <div class="section-head">
 <div>
-<span class="num">02</span>
+<span class="num">03</span>
 <h2>Processo Administrativo único para infrações autossuspensivas</h2>
 <p>Infrações do DETRAN e de outros órgãos — status da demanda e evolução do projeto.</p>
 </div>
@@ -1365,7 +1449,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div></div><div class="section" id="pen-modulo">
 <div class="section-head">
 <div>
-<span class="num">03</span>
+<span class="num">04</span>
 <h2>Jornada AEDJ</h2>
 <p>Status do trabalho conjunto entre DHC e AEDJ</p>
 </div>
@@ -1388,7 +1472,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-novidades">
 <div class="section-head">
 <div>
-<span class="num">04</span>
+<span class="num">05</span>
 <h2>Eventuais “novidades” com impacto ao cidadão</h2>
 </div>
 <span class="tag">impacto · judicialização</span>
@@ -1406,7 +1490,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-cumprimento">
 <div class="section-head">
 <div>
-<span class="num">05</span>
+<span class="num">06</span>
 <h2>Cumprimento de Decisões</h2>
 <p>“O que podemos ajustar?” — cumprimento parcial das decisões.</p>
 </div>
@@ -1425,7 +1509,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-decisao">
 <div class="section-head">
 <div>
-<span class="num">05.1</span>
+<span class="num">06.1</span>
 <h2>Trecho da decisão</h2>
 </div>
 <span class="tag">decisão judicial</span>
@@ -1440,7 +1524,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-pontuacao">
 <div class="section-head">
 <div>
-<span class="num">05.2</span>
+<span class="num">06.2</span>
 <h2>Exclusão da Pontuação do Processo de Suspensão</h2>
 </div>
 <span class="tag">AIT · pontuação</span>
@@ -1455,7 +1539,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-suspensao">
 <div class="section-head">
 <div>
-<span class="num">05.3</span>
+<span class="num">06.3</span>
 <h2>Desbloqueio da suspensão</h2>
 </div>
 <span class="tag">PA 121794/2023</span>
@@ -1469,7 +1553,7 @@ table.sei tfoot td:first-child{text-align:left}
 </div><div class="section" id="pen-cassacao">
 <div class="section-head">
 <div>
-<span class="num">05.4</span>
+<span class="num">06.4</span>
 <h2>Desbloqueio da cassação</h2>
 </div>
 <span class="tag">PA 102633/2024</span>
