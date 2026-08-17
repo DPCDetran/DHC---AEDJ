@@ -1980,6 +1980,46 @@ table.sei tfoot td{
   .vol-legend{grid-template-columns:1fr !important;}
 }
 
+
+/* Novo bloco AEDJ — Gestão de Condutores */
+.aedj-opportunities{
+  grid-template-columns:repeat(2,1fr) !important;
+}
+.aedj-opportunities .card{
+  min-height:230px;
+}
+.aedj-opportunities .flow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  align-items:center;
+  margin-top:14px;
+}
+.aedj-opportunities .flow span{
+  background:#eaf5fb;
+  color:#004077;
+  border:1px solid #d8e5ee;
+  border-radius:6px;
+  padding:6px 9px;
+  font-size:11px;
+  font-weight:800;
+}
+.aedj-opportunities .flow b{
+  color:#005CA8;
+}
+.aedj-opportunity-note{
+  margin-top:14px;
+  border-left:4px solid #3490CE !important;
+  background:#f5f9fc !important;
+}
+@media(min-width:1200px){
+  .aedj-opportunities .card p{font-size:17px !important;}
+  .aedj-opportunities .flow span{font-size:14px;}
+  .aedj-opportunity-note{font-size:17px !important;}
+}
+@media(max-width:800px){
+  .aedj-opportunities{grid-template-columns:1fr !important;}
+}
 </style>
 <style>
 /* Ajuste de destaque — PONTO DE AJUSTE */
@@ -2018,7 +2058,7 @@ table.sei tfoot td{
 <a href="#sec-competencias">1. Competências</a>
 <a href="#sec-contran">2. Resolução CONTRAN 1.020/2025</a>
 <a href="#sec-sei">3. Processos SEI recebidos</a>
-</div>
+<a href="#sec-aedj-oportunidades">4. Tratamento AEDJ</a></div>
 <div class="jump" id="jump-penalidades" style="display:none"><a href="#pen-competencias">1. Competências</a><a href="#pen-fraudes">2. Fraudes CNH</a><a href="#pen-paunico">3. PA único</a><a href="#pen-modulo">4. Jornada AEDJ</a><a href="#pen-novidades">5. Novidades / impactos</a><a href="#pen-cumprimento">6. Cumprimento</a></div><div class="jump" id="jump-volumetria" style="display:none"><a href="#vol-resumo">1. Visão geral</a><a href="#vol-macro">2. Distribuição macro</a><a href="#vol-grupos">3. Grupos organizacionais</a><a href="#vol-detalhe">4. Coordenadorias e divisões</a></div>
 <main>
 <section class="panel active" id="condutores">
@@ -2077,7 +2117,38 @@ table.sei tfoot td{
 </div>
 </div>
 </div>
-</section>
+<div class="section" id="sec-aedj-oportunidades">
+<div class="section-head">
+<div>
+<span class="num">04</span>
+<h2>Tratamento de demandas pela AEDJ</h2>
+</div>
+<span class="tag">OPORTUNIDADE DE OTIMIZAÇÃO</span>
+</div>
+<div class="judicial aedj-opportunities">
+<div class="card hot">
+<h3>Desbloqueio de permissionário penalizado <span class="pill">EM ALTA</span></h3>
+<p>Nos casos em que a decisão judicial e os registros disponíveis permitam identificar com segurança a providência determinada, a análise e o tratamento podem ser concluídos pela AEDJ, sem necessidade de encaminhamento à Coordenadoria de Gestão de Condutores.</p>
+<div class="flow">
+<span>Decisão judicial</span><b>→</b>
+<span>Análise AEDJ</span><b>→</b>
+<span>Execução da providência</span>
+</div>
+</div>
+<div class="card">
+<h3>Confirmação de autenticidade da CNH</h3>
+<p>Quando a solicitação se limitar à confirmação de dados ou da autenticidade do documento, a AEDJ pode realizar a análise a partir das consultas institucionais disponíveis, acionando a área técnica apenas diante de divergência cadastral ou necessidade efetiva de intervenção.</p>
+<div class="flow">
+<span>Solicitação judicial</span><b>→</b>
+<span>Consulta AEDJ</span><b>→</b>
+<span>DHC somente se houver divergência</span>
+</div>
+</div>
+</div>
+<div class="conclusion aedj-opportunity-note">
+<b>Oportunidade de otimização:</b> Nos dois cenários acima, quando a análise estiver suficientemente instruída e não houver impedimento sistêmico, o tratamento pode ser realizado diretamente pela AEDJ, reduzindo tramitações internas e o tempo de resposta.
+  </div>
+</div></section>
 <section class="panel" id="penalidades">
 <!-- 01 -->
 <!-- 02 -->
@@ -2137,7 +2208,7 @@ table.sei tfoot td{
 <div class="insight" style="margin-top:0">
 <div class="ico">!</div>
 <div>
-<b>Replanejamento:</b> Demanda paralisada desde 15/06 devido ao freezing do projeto CNPJ Alfa ter sido estendido até 21/08/2026.
+<b>Replanejamento:</b> Demanda paralisada desde 15/06 devido ao freezing do projeto CNPJ Alfa ter sido estendido até 04/09/2026.
       </div>
 </div>
 <div class="section" style="margin-top:22px">
