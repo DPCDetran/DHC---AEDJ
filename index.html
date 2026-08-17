@@ -27,7 +27,7 @@
   --purplebg:#eee8f7;
   --amber:#9c6800;
   --amberbg:#fff4d9;
-  --red:#a43829;
+  --red:#004077;
   --redbg:#fbe9e5;
   --shadow:0 12px 30px rgba(0,64,119,.08);
 }
@@ -545,9 +545,9 @@ main{
 }
 
 .kpi.dso{border-top:4px solid #3490CE}
-.kpi.cgc{border-top:4px solid #5b4282}
-.kpi.renach{border-top:4px solid #3f6e20}
-.kpi.dgfc{border-top:4px solid #9a6500}
+.kpi.cgc{border-top:4px solid #004077}
+.kpi.renach{border-top:4px solid #005CA8}
+.kpi.dgfc{border-top:4px solid #005CA8}
 
 /* BREAKDOWN */
 .breakdown{
@@ -601,7 +601,7 @@ main{
 }
 
 .bd-row.hl .bd-fill{
-  background:linear-gradient(90deg,#d7a345,#9a6500);
+  background:linear-gradient(90deg,#d7a345,#005CA8);
 }
 
 .bd-val{
@@ -682,7 +682,7 @@ table.sei tfoot td:first-child{text-align:left}
   height:34px;
   border-radius:50%;
   background:#fff0c9;
-  color:#9a6500;
+  color:#005CA8;
   display:grid;
   place-items:center;
   font-weight:900;
@@ -715,7 +715,7 @@ table.sei tfoot td:first-child{text-align:left}
 
 .judicial strong{color:#004077}
 
-.judicial .card.hot{border-top-color:#d49a36}
+.judicial .card.hot{border-top-color:#3490CE}
 
 .pill{
   display:inline-flex;
@@ -725,7 +725,7 @@ table.sei tfoot td:first-child{text-align:left}
   text-transform:uppercase;
   letter-spacing:.4px;
   background:#fff0c9;
-  color:#9a6500;
+  color:#005CA8;
   padding:4px 8px;
   border-radius:20px;
   margin-left:8px;
@@ -1067,7 +1067,7 @@ table.sei tfoot td:first-child{text-align:left}
 
 .attention-adjust-label{
   margin-bottom:4px;
-  color:#9a6500;
+  color:#005CA8;
   font-size:9px;
   font-weight:900;
   letter-spacing:1px;
@@ -1641,6 +1641,345 @@ body{
   }
 }
 
+
+/* ==========================================================
+   ABA VOLUMETRIA AEDJ - DHC
+========================================================== */
+.vol-kpis{grid-template-columns:repeat(4,1fr)!important;}
+
+.vol-summary-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:14px;
+}
+.vol-summary-card{min-height:160px;display:flex;flex-direction:column;justify-content:center;}
+.vol-big{font-size:32px;font-weight:850;color:#004077;text-align:center;margin-top:10px;}
+
+.vol-macro-card{
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 7px 20px rgba(0,64,119,.05);
+  padding:22px;
+}
+.vol-macro-bar{
+  display:flex;
+  height:54px;
+  overflow:hidden;
+  border-radius:10px;
+  margin-bottom:20px;
+  background:#edf4f8;
+}
+.vol-seg{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:850;
+}
+.vol-blue{background:#3490CE!important;}
+.vol-gold{background:#3490CE!important;}
+.vol-green{background:#3490CE!important;}
+.vol-gray{background:#7db9df!important;}
+
+.vol-legend{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px 20px;
+}
+.vol-legend>div{
+  display:grid;
+  grid-template-columns:14px 1fr auto;
+  gap:9px;
+  align-items:center;
+  font-size:12px;
+}
+.vol-dot{width:12px;height:12px;border-radius:3px;}
+.vol-legend b{color:#004077;}
+.vol-legend span{color:#64798b;font-weight:700;}
+
+.vol-group-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.vol-group-card{min-height:360px;}
+.vol-total{
+  text-align:center;
+  margin-top:20px;
+  font-size:46px;
+  line-height:1;
+  font-weight:850;
+  color:#004077;
+}
+.vol-pct{
+  text-align:center;
+  color:#64798b;
+  font-size:12px;
+  font-weight:700;
+  margin-top:7px;
+}
+
+.vol-coord-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.vol-card{
+  min-height:350px;
+}
+.vol-card h3 .sigla,
+.vol-group-card h3 .sigla{
+  margin-top:8px;
+}
+.vol-resp{
+  margin:10px 0 14px;
+  color:#64798b;
+  font-size:11px;
+  font-weight:650;
+  text-align:center;
+}
+.vol-card-muted{background:#f7f9fb;}
+
+.vol-unidentified-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+}
+.vol-unidentified-grid .card{
+  min-height:145px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.vol-unidentified-num{
+  text-align:center;
+  color:#004077;
+  font-size:36px;
+  font-weight:850;
+  margin-bottom:10px;
+}
+
+@media (min-width:1200px){
+  .vol-summary-card p{font-size:16px!important;}
+  .vol-big{font-size:42px;}
+  .vol-seg{font-size:16px;}
+  .vol-legend>div{font-size:16px;}
+  .vol-group-card .mini-list li,
+  .vol-card .mini-list li{font-size:17px!important;}
+  .vol-resp{font-size:15px;}
+  .vol-total{font-size:54px;}
+  .vol-pct{font-size:15px;}
+  .vol-unidentified-num{font-size:46px;}
+}
+
+@media(max-width:1100px){
+  .vol-kpis,.vol-summary-grid,.vol-unidentified-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .vol-group-grid,.vol-coord-grid{grid-template-columns:repeat(2,1fr);}
+  .vol-legend{grid-template-columns:1fr;}
+}
+
+@media(max-width:650px){
+  .vol-kpis,.vol-summary-grid,.vol-unidentified-grid,.vol-group-grid,.vol-coord-grid{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* ==========================================================
+   PALETA OFICIAL DETRAN-SP — PADRONIZAÇÃO GLOBAL
+   Azul principal: #005CA8
+   Azul claro:     #3490CE
+   Azul escuro:    #004077
+========================================================== */
+:root{
+  --navy:#004077 !important;
+  --navy2:#005CA8 !important;
+  --blue:#005CA8 !important;
+  --mid:#3490CE !important;
+  --sky:#eaf5fb !important;
+  --pale:#f5f9fc !important;
+  --line:#d8e5ee !important;
+  --text:#173750 !important;
+  --muted:#64798b !important;
+
+  /* Mantém componentes semanticamente distintos, mas todos dentro da paleta azul */
+  --green:#005CA8 !important;
+  --greenbg:#eaf5fb !important;
+  --purple:#004077 !important;
+  --purplebg:#eaf5fb !important;
+  --amber:#005CA8 !important;
+  --amberbg:#eaf5fb !important;
+  --red:#004077 !important;
+  --redbg:#eaf5fb !important;
+}
+
+/* Cabeçalhos / áreas / faixas */
+.hero,
+.area .top,
+.kpi.total,
+.stat-strip .s.accent,
+table.sei tfoot td{
+  background:linear-gradient(110deg,#004077,#005CA8) !important;
+}
+
+/* Barras e gráficos */
+.bd-fill,
+.bd-row.hl .bd-fill,
+.vol-track i{
+  background:linear-gradient(90deg,#3490CE,#005CA8) !important;
+}
+
+.vol-blue,
+.vol-gold,
+.vol-green,
+.vol-gray{
+  background:#005CA8 !important;
+}
+.vol-macro-bar .vol-seg:nth-child(1){background:#004077 !important;}
+.vol-macro-bar .vol-seg:nth-child(2){background:#005CA8 !important;}
+.vol-macro-bar .vol-seg:nth-child(3){background:#3490CE !important;}
+.vol-macro-bar .vol-seg:nth-child(4){background:#7db9df !important;}
+
+.vol-legend .vol-dot:nth-child(1){background:#004077 !important;}
+
+/* KPIs: todos os destaques passam a usar somente os três azuis */
+.kpi.dso,
+.kpi.cgc,
+.kpi.renach,
+.kpi.dgfc{
+  border-top-color:#3490CE !important;
+}
+
+/* Cards de insight / atenção sem amarelo */
+.insight,
+.attention-adjust-card{
+  background:linear-gradient(120deg,#f3f9fd,#ffffff) !important;
+  border-color:#b9d9ed !important;
+}
+.insight .ico,
+.attention-adjust-icon{
+  background:#005CA8 !important;
+  color:#fff !important;
+}
+.attention-adjust-card{
+  border-left-color:#3490CE !important;
+}
+.attention-adjust-label{
+  color:#005CA8 !important;
+}
+
+/* Pills / tags / siglas */
+.pill,
+.sigla,
+.tag,
+.pen-comp-sigla{
+  background:#eaf5fb !important;
+  color:#004077 !important;
+  border-color:#b9d9ed !important;
+}
+
+/* Checks */
+.check{
+  background:#eaf5fb !important;
+  color:#005CA8 !important;
+}
+
+/* Bordas de cards destacados */
+.lead,
+.judicial .card,
+.judicial .card.hot,
+.next .card{
+  border-color:#d8e5ee;
+  border-left-color:#3490CE !important;
+  border-top-color:#3490CE !important;
+}
+
+/* Timeline */
+.pen-timeline-line{
+  background:linear-gradient(90deg,#3490CE,#005CA8) !important;
+}
+.pen-timeline-dot{
+  background:#005CA8 !important;
+  border-color:#eaf5fb !important;
+  box-shadow:0 0 0 2px #3490CE !important;
+}
+
+/* Gráfico / barra da seção judicial */
+.bd-row.hl .lbl,
+.bd-row .lbl.hl{
+  color:#005CA8 !important;
+}
+
+/* Remove acentos visuais fora da paleta em elementos comuns */
+.vol-pct,
+.vol-value span,
+.vol-label span,
+.vol-resp{
+  color:#64798b !important;
+}
+
+/* ===== CORREÇÃO DE LEGIBILIDADE — DISTRIBUIÇÃO MACRO ===== */
+.vol-macro-bar .vol-seg:nth-child(1),
+.vol-legend > div:nth-child(1) .vol-dot{
+  background:#004077 !important;
+}
+.vol-macro-bar .vol-seg:nth-child(2),
+.vol-legend > div:nth-child(2) .vol-dot{
+  background:#005CA8 !important;
+}
+.vol-macro-bar .vol-seg:nth-child(3),
+.vol-legend > div:nth-child(3) .vol-dot{
+  background:#3490CE !important;
+}
+.vol-macro-bar .vol-seg:nth-child(4),
+.vol-legend > div:nth-child(4) .vol-dot{
+  background:#8BC1E5 !important;
+}
+
+.vol-macro-bar{
+  height:64px !important;
+  margin-bottom:24px !important;
+}
+.vol-seg{
+  font-size:clamp(14px,1.15vw,20px) !important;
+  font-weight:850 !important;
+  white-space:nowrap;
+}
+.vol-legend{
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:14px 28px !important;
+}
+.vol-legend > div{
+  display:grid !important;
+  grid-template-columns:18px minmax(0,1fr) auto !important;
+  gap:12px !important;
+  align-items:center !important;
+  padding:10px 12px !important;
+  border:1px solid #d8e5ee;
+  border-radius:10px;
+  background:#fff;
+}
+.vol-dot{
+  width:16px !important;
+  height:16px !important;
+  border-radius:4px !important;
+}
+.vol-legend b{
+  font-size:clamp(13px,1vw,17px) !important;
+  line-height:1.25 !important;
+}
+.vol-legend span{
+  font-size:clamp(13px,.95vw,16px) !important;
+  color:#004077 !important;
+  font-weight:800 !important;
+  white-space:nowrap;
+}
+@media(max-width:850px){
+  .vol-legend{grid-template-columns:1fr !important;}
+}
+
 </style>
 <style>
 /* Ajuste de destaque — PONTO DE AJUSTE */
@@ -1661,7 +2000,6 @@ body{
   }
 }
 </style>
-
 </head>
 <body><div class="shell">
 <header class="hero">
@@ -1675,14 +2013,14 @@ body{
 <nav class="tabs">
 <button class="tab active" data-tab="condutores">Coordenadoria de Gestão de Condutores</button>
 <button class="tab" data-tab="penalidades">Coordenadoria de Penalidades de Habilitação</button>
-</nav>
+<button class="tab" data-tab="volumetria">Volumetria AEDJ - DHC</button></nav>
 <div class="jump" id="jump-condutores">
 <a href="#sec-competencias">1. Competências</a>
 <a href="#sec-contran">2. Resolução CONTRAN 1.020/2025</a>
 <a href="#sec-sei">3. Processos SEI recebidos</a>
 <a href="#sec-judicial">4. Demandas judiciais de maior volume</a>
 </div>
-<div class="jump" id="jump-penalidades" style="display:none"><a href="#pen-competencias">1. Competências</a><a href="#pen-fraudes">2. Fraudes CNH</a><a href="#pen-paunico">3. PA único</a><a href="#pen-modulo">4. Jornada AEDJ</a><a href="#pen-novidades">5. Novidades / impactos</a><a href="#pen-cumprimento">6. Cumprimento</a></div>
+<div class="jump" id="jump-penalidades" style="display:none"><a href="#pen-competencias">1. Competências</a><a href="#pen-fraudes">2. Fraudes CNH</a><a href="#pen-paunico">3. PA único</a><a href="#pen-modulo">4. Jornada AEDJ</a><a href="#pen-novidades">5. Novidades / impactos</a><a href="#pen-cumprimento">6. Cumprimento</a></div><div class="jump" id="jump-volumetria" style="display:none"><a href="#vol-resumo">1. Visão geral</a><a href="#vol-macro">2. Distribuição macro</a><a href="#vol-grupos">3. Grupos organizacionais</a><a href="#vol-detalhe">4. Coordenadorias e divisões</a><a href="#vol-nao-identificados">5. Não identificados</a><a href="#vol-metodologia">6. Metodologia</a></div>
 <main>
 <section class="panel active" id="condutores">
 <div class="coordenadoria-responsavel-texto">Responsável pela Coordenadoria: Ane Freitas</div><div class="section" id="sec-competencias">
@@ -1749,12 +2087,13 @@ body{
 <div class="bd-row hl"><div class="lbl hl">CGC</div><div class="bd-track"><div class="bd-fill" style="width:10.5%"></div></div><div class="bd-val">10,5%</div></div>
 <div class="bd-row"><div class="lbl">CEMP</div><div class="bd-track"><div class="bd-fill" style="width:4.9%"></div></div><div class="bd-val">4,9%</div></div>
 <div class="bd-row"><div class="lbl">CGE</div><div class="bd-track"><div class="bd-fill" style="width:2.5%"></div></div><div class="bd-val">2,5%</div></div>
+<div class="bd-row"><div class="lbl">CGIB</div><div class="bd-track"><div class="bd-fill" style="width:1.8%"></div></div><div class="bd-val">1,8%</div></div>
 </div>
 <div class="judicial">
 <div class="card hot"><h3>Desbloqueio de permissionário penalizado<span class="pill">Em alta</span></h3><p>Nos casos em que a decisão judicial e os registros disponíveis permitam identificar com segurança a providência determinada, a análise e o tratamento podem ser concluídos pela AEDJ, sem necessidade de encaminhamento à Coordenadoria de Gestão de Condutores.</p><div class="flow"><span>Decisão judicial</span><i>→</i><span>Análise AEDJ</span><i>→</i><span>Execução da providência</span></div></div>
 <div class="card"><h3>Confirmação de autenticidade da CNH</h3><p>Quando a solicitação se limitar à confirmação de dados ou da autenticidade do documento, a AEDJ pode realizar a análise a partir das consultas institucionais disponíveis, acionando a área técnica apenas diante de divergência cadastral ou necessidade efetiva de intervenção.</p><div class="flow"><span>Solicitação judicial</span><i>→</i><span>Consulta AEDJ</span><i>→</i><span>DHC somente se houver divergência</span></div></div>
 </div>
-<div class="conclusion"><b>Oportunidade de otimização:</b> Nos dois cenários acima, quando a análise estiver suficientemente instruída e não houver impedimento sistêmico, o tratamento pode ser realizado diretamente pela AEDJ, reduzindo tramitações internas e o tempo de resposta.</div>
+<div class="conclusion"><b>Oportunidade de otimização:</b> a Portaria nº 44/2025 atribui à AEDJ e à Assessoria de Demandas de Condutores a instrução e o acompanhamento das demandas judiciais relacionadas à habilitação, bem como a adoção das providências necessárias ao seu atendimento. Nos dois cenários acima, quando a análise estiver suficientemente instruída e não houver impedimento sistêmico, o tratamento pode ser realizado diretamente pela AEDJ, reduzindo tramitações internas e o tempo de resposta.</div>
 </div>
 </section>
 <section class="panel" id="penalidades">
@@ -2009,7 +2348,262 @@ body{
 <p>Garantir também a consequente baixa da portaria, evitando o cumprimento parcial da decisão.</p>
 </div>
 </div>
-</div></section></main></div>
+</div></section><section class="panel" id="volumetria">
+<div class="section" id="vol-resumo">
+<div class="section-head">
+<div>
+<span class="num">01</span>
+<h2>Volumetria de processos AEDJ → DHC</h2>
+<p>Processos SEI únicos recebidos pela AEDJ e direcionados à DHC, com data de abertura entre 01/01/2026 e 14/08/2026.</p>
+</div>
+<span class="tag">VISÃO GERAL</span>
+</div>
+<div class="stat-strip vol-kpis">
+<div class="s accent">
+<div class="n">1.649</div>
+<div class="l">Processos SEI únicos no período</div>
+</div>
+<div class="s">
+<div class="n">631</div>
+<div class="l">Gabinete da Diretoria</div>
+</div>
+<div class="s">
+<div class="n">815</div>
+<div class="l">Gestão de Habilitações e Penalidades</div>
+</div>
+<div class="s">
+<div class="n">121</div>
+<div class="l">Gestão de Exames</div>
+</div>
+</div>
+<div class="vol-summary-grid">
+<div class="card vol-summary-card">
+<h3>Base histórica completa</h3>
+<div class="vol-big">3.279</div>
+<p>Processos únicos na base histórica de jul/2025 a ago/2026.</p>
+</div>
+<div class="card vol-summary-card">
+<h3>Maior destino isolado</h3>
+<div class="vol-big">38,3%</div>
+<p>Gabinete da Diretoria — 631 processos (ADJ + MS).</p>
+</div>
+<div class="card vol-summary-card">
+<h3>Maior volume técnico</h3>
+<div class="vol-big">49,4%</div>
+<p>CGHP — 815 processos (CGC + CPH + CGIB).</p>
+</div>
+<div class="card vol-summary-card">
+<h3>Não identificados / fora da DHC</h3>
+<div class="vol-big">5,0%</div>
+<p>82 registros sem enquadramento válido.</p>
+</div>
+</div>
+<div class="insight">
+<div class="ico">i</div>
+<div>
+<b>Correção do levantamento:</b> a versão anterior considerava apenas CPH, CGC, CEMP e CGE, cobrindo cerca de 53% do total. A apuração atual inclui também o Gabinete da Diretoria e a Coordenadoria de Gestão da Identificação Biométrica, cobrindo 100% dos registros classificados no painel de volumetria.
+      </div>
+</div>
+</div>
+<div class="section" id="vol-macro">
+<div class="section-head">
+<div>
+<span class="num">02</span>
+<h2>Distribuição macro dos processos</h2>
+<p>Participação de cada grande grupo organizacional no total de 1.649 processos.</p>
+</div>
+<span class="tag">DISTRIBUIÇÃO</span>
+</div>
+<div class="vol-macro-card">
+<div class="vol-macro-bar">
+<div class="vol-seg vol-blue" style="width:38.3%">38,3%</div>
+<div class="vol-seg vol-gold" style="width:49.4%">49,4%</div>
+<div class="vol-seg vol-green" style="width:7.3%">7,3%</div>
+<div class="vol-seg vol-gray" style="width:5%">5,0%</div>
+</div>
+<div class="vol-legend">
+<div><i class="vol-dot vol-blue"></i><b>Gabinete da Diretoria</b><span>631 · 38,3%</span></div>
+<div><i class="vol-dot vol-gold"></i><b>Gestão de Habilitações e Penalidades</b><span>815 · 49,4%</span></div>
+<div><i class="vol-dot vol-green"></i><b>Gestão de Exames</b><span>121 · 7,3%</span></div>
+<div><i class="vol-dot vol-gray"></i><b>Não identificados / fora da DHC</b><span>82 · 5,0%</span></div>
+</div>
+</div>
+</div>
+<div class="section" id="vol-grupos">
+<div class="section-head">
+<div>
+<span class="num">03</span>
+<h2>Grandes grupos organizacionais</h2>
+<p>Detalhamento dos volumes recebidos pelos principais blocos da Diretoria.</p>
+</div>
+<span class="tag">ESTRUTURA</span>
+</div>
+<div class="vol-group-grid">
+<div class="card lead vol-group-card">
+<h3>Gabinete da Diretoria <span class="sigla">DHC</span></h3>
+<div class="vol-total">631</div>
+<div class="vol-pct">38,3% do total</div>
+<ul class="mini-list">
+<li><b>Mesa (MS)</b> — 599</li>
+<li><b>Assessor Adjunto (ADJ)</b> — 30</li>
+<li><b>Outros lançamentos</b> — 2</li>
+</ul>
+</div>
+<div class="card vol-group-card">
+<h3>Gestão de Habilitações e Penalidades <span class="sigla">CGHP</span></h3>
+<div class="vol-total">815</div>
+<div class="vol-pct">49,4% do total</div>
+<ul class="mini-list">
+<li><b>Penalidades (CPH)</b> — 577</li>
+<li><b>Condutores (CGC)</b> — 188</li>
+<li><b>Biometria (CGIB)</b> — 40</li>
+<li><b>Gabinete CGHP</b> — 10</li>
+</ul>
+</div>
+<div class="card vol-group-card">
+<h3>Gestão de Exames <span class="sigla">CGGE</span></h3>
+<div class="vol-total">121</div>
+<div class="vol-pct">7,3% do total</div>
+<ul class="mini-list">
+<li><b>Méd./Psic. (CEMP)</b> — 80</li>
+<li><b>Exames (CGE)</b> — 39</li>
+<li><b>Gabinete CGGE</b> — 2</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="vol-detalhe">
+<div class="section-head">
+<div>
+<span class="num">04</span>
+<h2>Detalhamento por coordenadoria e divisão</h2>
+<p>Volumes registrados dentro de cada coordenadoria da DHC no período analisado.</p>
+</div>
+<span class="tag">DETALHAMENTO</span>
+</div>
+<div class="vol-coord-grid">
+<div class="card lead vol-card">
+<h3>Penalidades de Habilitação <span class="sigla">CPH · 577</span></h3>
+<div class="vol-resp">Coordenadora: Evelyn Roberta Fortunato Silva</div>
+<ul class="mini-list">
+<li><b>Div. Processos de Condutores (DPC)</b> — 231</li>
+<li><b>Div. Processos de Suspensão (DPS)</b> — 229</li>
+<li><b>Div. Processos de Cassação (DPCA)</b> — 109</li>
+<li><b>Registros diretos (CPH)</b> — 8</li>
+</ul>
+</div>
+<div class="card vol-card">
+<h3>Gestão de Condutores <span class="sigla">CGC · 188</span></h3>
+<div class="vol-resp">Coordenadora: Ane Freitas da Silva</div>
+<ul class="mini-list">
+<li><b>Suporte Operacional (DSO)</b> — 67</li>
+<li><b>Gestão do RENACH</b> — 43</li>
+<li><b>Formação de Condutores (DGFC)</b> — 36</li>
+<li><b>Registros diretos (CGC)</b> — 33</li>
+<li><b>Padronização (DPCO)</b> — 6</li>
+<li><b>Registros mistos</b> — 3</li>
+</ul>
+</div>
+<div class="card vol-card">
+<h3>Identificação Biométrica <span class="sigla">CGIB · 40</span></h3>
+<div class="vol-resp">Coordenadora: Thamyres Raiane da Silva</div>
+<ul class="mini-list">
+<li><b>Registros diretos (CGIB)</b> — 28</li>
+<li><b>Autenticação (DAB)</b> — 10</li>
+<li><b>Coleta (DCB)</b> — 1</li>
+<li><b>Registros mistos</b> — 1</li>
+</ul>
+</div>
+<div class="card vol-card">
+<h3>Exames Médicos e Psicológicos <span class="sigla">CEMP · 80</span></h3>
+<div class="vol-resp">Coordenadora: Claudia Platero Fernandes</div>
+<ul class="mini-list">
+<li><b>Aptidão Física/Mental (DEAFM)</b> — 52</li>
+<li><b>Registros diretos (CEMP)</b> — 15</li>
+<li><b>Avaliação Psicológica (DEAP)</b> — 12</li>
+<li><b>Registros mistos</b> — 1</li>
+</ul>
+</div>
+<div class="card vol-card">
+<h3>Gestão de Exames <span class="sigla">CGE · 39</span></h3>
+<div class="vol-resp">Coordenadora: Viviane Iracema Mochiotti Benedito</div>
+<ul class="mini-list">
+<li><b>Exame Prático (DGEP)</b> — 28</li>
+<li><b>Exame Teórico (DGET)</b> — 9</li>
+<li><b>Registros diretos / mistos (CGE)</b> — 2</li>
+</ul>
+</div>
+<div class="card vol-card vol-card-muted">
+<h3>Gabinetes das Coordenadorias Gerais</h3>
+<ul class="mini-list">
+<li><b>Gabinete CGHP</b> — 10</li>
+<li><b>Gabinete CGGE</b> — 2</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="vol-nao-identificados">
+<div class="section-head">
+<div>
+<span class="num">05</span>
+<h2>Não identificados ou fora do escopo da DHC</h2>
+<p>82 registros, equivalentes a 5,0% do total do período.</p>
+</div>
+<span class="tag">QUALIDADE DO DADO</span>
+</div>
+<div class="vol-unidentified-grid">
+<div class="card">
+<div class="vol-unidentified-num">23</div>
+<h3>“Não consta na DHC”</h3>
+</div>
+<div class="card">
+<div class="vol-unidentified-num">21</div>
+<h3>Célula vazia / #N/A</h3>
+</div>
+<div class="card">
+<div class="vol-unidentified-num">15</div>
+<h3>“AMS” não catalogado</h3>
+</div>
+<div class="card">
+<div class="vol-unidentified-num">23</div>
+<h3>Outros códigos isolados</h3>
+</div>
+</div>
+<div class="conclusion">
+<b>Ponto de atenção:</b> recomenda-se padronizar o preenchimento do campo de setor na planilha de controle para reduzir registros sem classificação válida.
+    </div>
+</div>
+<div class="section" id="vol-metodologia">
+<div class="section-head">
+<div>
+<span class="num">06</span>
+<h2>Nota metodológica</h2>
+<p>Critérios usados para consolidação, deduplicação e classificação dos processos.</p>
+</div>
+<span class="tag">METODOLOGIA</span>
+</div>
+<div class="area-grid">
+<div class="area">
+<div class="top"><b>Como os números foram apurados</b></div>
+<div class="body">
+<div class="deliverable">266 abas diárias consolidadas — 16.404 lançamentos brutos.</div>
+<div class="deliverable">Cada processo identificado pelo número SEI e deduplicado, mantendo o registro mais recente.</div>
+<div class="deliverable">Recorte de 01/01/2026 a 14/08/2026: 1.649 processos únicos.</div>
+<div class="deliverable">Destino final lido dos campos “SETOR2” / “SETOR ” da planilha.</div>
+</div>
+</div>
+<div class="area">
+<div class="top"><b>Como o setor foi classificado</b></div>
+<div class="body">
+<div class="deliverable">Siglas associadas à Coordenadoria e Coordenadoria Geral conforme estrutura da DHC.</div>
+<div class="deliverable">Campos com mais de um setor foram contabilizados na primeira unidade mencionada.</div>
+<div class="deliverable">Siglas não catalogadas e registros inconsistentes foram mantidos como “Não identificados”.</div>
+<div class="deliverable">A reclassificação amplia a cobertura da versão anterior para 100% dos registros do painel.</div>
+</div>
+</div>
+</div>
+</div>
+</section></main></div>
 <!-- 03 -->
 <!-- 04 -->
 <!-- 05 -->
@@ -2050,5 +2644,21 @@ document.getElementById('zoomModal')?.addEventListener('click',e=>{
 document.addEventListener('keydown',e=>{
   if(e.key==='Escape') document.getElementById('zoomModal')?.classList.remove('open');
 });
+</script>
+<script>
+(function(){
+  const jumpIds = ['jump-condutores','jump-penalidades','jump-volumetria'];
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const id = btn.dataset.tab;
+      jumpIds.forEach(jid=>{
+        const el = document.getElementById(jid);
+        if(!el) return;
+        const target = 'jump-' + id;
+        el.style.display = (jid === target) ? 'flex' : 'none';
+      });
+    });
+  });
+})();
 </script>
 </body></html>
